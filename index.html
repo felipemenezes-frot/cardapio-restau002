@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Itoca</title>
+
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+    .topo h1 {
+      font-family: Times New Roman;
+      font-size: 38px;
+      display: flex;
+      justify-content: center;
+      color: black;
+    }
+.menu, .pao-arabe {
+  scroll-margin-top: 80px;
+}
+
+
+/* Remove espaçamentos globais */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* TOPO com fundo */
+.topo {
+  background: url('WhatsApp Image 2025-07-07 at 19.03.01.jpeg') no-repeat center center;
+  background-size: cover;
+  background-color: black;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;  /* Organiza em coluna */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px 10px;
+}
+
+/* Imagem da logo circular SEM borda */
+.logo-circular {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Nome do restaurante */
+.logo h1 {
+  font-size: 32px;
+  margin: 10px 0;
+  color: white;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Endereço */
+.logo span {
+  display: block;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Caixa do horário */
+.date-span {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #22c55e;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+}
+
+
+
+   .topo a {
+      text-decoration: none;
+      color: black;
+    }
+
+
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .date-span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #22c55e;
+      color: white;
+      padding: 6px 15px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 10px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      font-family: sans-serif;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      margin-left: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      position: relative;
+      transition: font-size 0.3s ease;
+    }
+
+    .car {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      background-color: white;
+      padding: 20px 30px;
+      z-index: 1000;
+      scroll-behavior: smooth;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .car nav {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .car nav {
+        justify-content: flex-start;
+      }
+    }
+
+    .car nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: black;
+      transition: width 0.3s ease;
+    }
+
+    .car nav a:hover {
+      font-size: 16px;
+    }
+
+    .car nav a:hover::after {
+      width: 100%;
+    }
+
+    .car::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .car::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+
+    .car::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .nome {
+      font-size: 19px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .p1,.p2,.p3,.p4 {
+      background-color: #fff;
+      border: 2px solid #eee;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 10px auto;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .p1:hover, .p2:hover, .p3:hover, .p4:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .p1 h4, .p2 h4, .p3 h4,.p4 h4{
+      margin-top: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .p1 p,.p2 p,.p3 p,.p4 p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      font-size: 18px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .h0 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .add-to-cart-btn {  
+      background-color: #22c55e;  
+      color: white;  
+      padding: 6px 12px;  
+      border: none;  
+      border-radius: 8px;  
+      cursor: pointer;  
+    }  
+
+    .carrinho-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ef4444;
+      padding: 15px 0;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .btn-carrinho {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: sans-serif;
+    }
+
+    .modal-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      width: 100%;
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+
+    .modal-cart {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      width: 90%;
+      max-width: 600px;
+    }
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  max-height: 200px; /* Altura controlada */
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+    .modal-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .cart-items {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+.cart-items::-webkit-scrollbar {
+  width: 8px;
+}
+.cart-items::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+
+    .cart-label {
+      font-weight: bold;
+      margin-top: 16px;
+    }
+
+    .cart-input {
+      width: 100%;
+      border: 2px solid #ccc;
+      padding: 4px;
+      border-radius: 6px;
+      margin: 4px 0;
+    }
+
+    .cart-warn {
+      color: red;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .cart-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .checkout-btn {
+      background-color: #22c55e;
+      color: #fff;
+      padding: 4px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    
+    .carrinho-footer.hidden {
+  display: none;
+}
+
+#close-modal-btn {
+  background-color: #ef4444; /* vermelho suave */
+  color: white;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#close-modal-btn:hover {
+  background-color: #dc2626; /* vermelho mais escuro */
+  transform: scale(1.05);
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div class="logop1">
+    <header class="topo">
+  <div class="logo">
+    <img src="logo.png.jpeg"Logo Itoca" class="logo-circular">
+    <h1>Brasa Nobre</h1>
+    <a href="https://maps.app.goo.gl/TmgMqSXSDVegSPARA?g_st=ac">
+      <span class="end">Av Ulisses Guimarães, 1625</span>
+    </a>
+    <div class="date-span" id="date-span">
+      <span>Seg à Sab - 19:00 às 22:00</span>
+    </div>
+  </div>
+</header>
+
+
+    <header class="car">
+      <nav>
+        <a href="#Sanduíches">Sanduíches</a>
+        <a href="#Pao-Arabe">Pão Árabe</a>
+        <a href="#Pastel">Pastel</a>
+        <a href="#Pizzas">Pizzas</a>
+        <a href="#Bebidas">Bebidas</a>
+        <a href="#Sobremesas">Sobremesas</a>
+      </nav>
+    </header>
+  </div>
+
+  <h2 class="nome">Sanduíches</h2>
+  <div class="menu" id="Sanduíches">
+    <div class="p1">
+      <h4>Americano</h4>
+      <p>Presunto, queijo, ovo, alface e molho especial.</p>
+      <div class="h0">
+        <p><span class="preco">R$ 10,00</span></p>
+        <button class="add-to-cart-btn" data-name="Americano" data-price="10.00">
+          <i class="fa fa-cart-plus"></i>
+        </button>
+      </div>
+    </div>
+    <div class="p1">
+    <h4>Bauru</h4>
+    <p>Hambúrguer suculento, queijo mussarela, presunto, alface, tomate e um delicioso creme de orégano.</p>
+     <div class="h0"> <p><span class="preco">R$ 10,00</span></p>
+   <button class="add-to-cart-btn" data-name="Bauru" data-price="10.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+</div>
+<div class="p1">
+    <h4>Cachorro-quente </h4>
+    <p>Salsicha, queijo mussarela derretido, batata palha crocante e molho especial da casa.</p>
+    <div class="h0"> <p><span class="preco">R$ 9,00</span></p>
+    <button class="add-to-cart-btn" data-name="Cachorro-quente" data-price="9.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+</div>
+<div class="p1">
+    <h4>Misto</h4>
+    <p>Queijo mussarela, presunto e molho especial da casa, simples e saboroso.</p>
+    <div class="h0"> <p><span class="preco">R$ 8,00</span></p>
+    <button class="add-to-cart-btn" data-name="Misto" data-price="8.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+</div>
+<div class="p2">
+    <h4>X-Banana </h4>
+    <p>Banana grelhada na chapa, queijo derretido e toque de canela caramelizada. Um sanduíche doce e irresistível!</p>
+   <div class="h0"> <p><span class="preco">R$ 10,00</span></p>
+    <button class="add-to-cart-btn" data-name="X-Banana" data-price="10.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+</div>
+<div class="p2">
+     <h4>X-Calabresa</h4>
+    <p>Hambúrguer suculento, calabresa, alface, tomate e molho especial da casa, trazendo um sabor marcante.</p>
+   <div class="h0"> <p><span class="preco">R$ 10,00</span></p>
+    <button class="add-to-cart-btn" data-name="X-Calabresa" data-price="10.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+</div>
+<div class="p2">
+     <h4>Salada X-Egg</h4>
+    <p>Hambúrguer suculento, ovo, alface fresca, tomate e molho especial da casa, servido em um pão macio.</p>
+    <div class="h0"> <p><span class="preco">R$ 10,00</span></p>
+    <button class="add-to-cart-btn" data-name="Salada-X-Egg" data-price="10.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+</div>
+<div class="p2">
+     <h4>X Natureba</h4>
+    <p>Queijo coalho grelhado, frango desfiado, cenoura e beterraba raladas, no pão de forma integral. Leve e nutritivo!</p>
+     <div class="h0"> <p><span class="preco">R$ 10,00</span></p>
+<button class="add-to-cart-btn" data-name="X-Natureba" data-price="10.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+</div>
+</header>
+  <header class="Pão Árabe" id="Pão Árabe">
+    <h2 class="nome">Pão Árabe</h2>
+    <div class="p3">
+        <h4>Guloso </h4>
+        <p>Hambúrguer suculento, queijo mussarela, presunto, salada fresca e molho especial da casa.</p>
+       <div class="h0">
+         <p><span class="preco">R$ 12,00</span></p>
+   <button class="add-to-cart-btn" data-name="Guloso" data-price="12.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+    </div>
+    <div class="p3">
+        <h4>Guloso 100 Noção </h4>
+        <p>Frango desfiado, cheddar cremoso, queijo mussarela, bacon, milho verde, salada e molho especial da casa.</p>
+          <div class="h0"> <p><span class="preco">R$ 16,00</span></p>
+    <button class="add-to-cart-btn" data-name="Guloso-100-Nocao" data-price="16.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+    </div>
+    <div class="p3">
+        <h4>Guloso Completo </h4>
+        <p>Hambúrguer, queijo mussarela, presunto, frango desfiado, salada fresca e molho especial da casa.</p>
+         <div class="h0"> <p><span class="preco">R$ 15,00</span></p>
+   <button class="add-to-cart-btn" data-name="Guloso Completo" data-price="15.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+    </div>
+    <div class="p3">
+        <h4>Gulosão </h4>
+        <p>Hambúrguer, frango desfiado, carne do sol, queijo mussarela, presunto, salada e molho especial da casa.</p>
+        <div class="h0"> <p><span class="preco">R$ 17,00</span></p>
+  <button class="add-to-cart-btn" data-name="Gulosao" data-price="17.00">
+          <i class="fa fa-cart-plus"></i>
+        </button></div>
+    </div>
+  </header></div>
+   
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="cart-modal">
+    <div class="modal-cart">
+      <h2 class="modal-title">Meu carrinho</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <p class="cart-total-text">Total: R$ <span id="cart-total">0.00</span></p>
+
+<p class="cart-label">Seu nome:</p>
+<input type="text" id="client-name" class="cart-input" placeholder="Digite seu nome completo..."/>
+<p class="cart-warn hidden" id="name-warn">Digite seu nome!</p>
+
+      <p class="cart-label">Endereço de entrega:</p>
+      <input type="text" id="address" class="cart-input" placeholder="Digite seu endereço completo..."/>
+      <p class="cart-warn hidden" id="address-warn">Digite seu endereço completo!</p>
+
+      <p class="cart-label">Forma de pagamento:</p>
+      <input type="text" id="payment-method" class="cart-input" placeholder="Ex: Pix, Dinheiro, Cartão..."/>
+      <p class="cart-warn hidden" id="payment-warn">Digite a forma de pagamento!</p>
+
+      <div class="cart-footer">
+        <button id="close-modal-btn">Fechar</button>
+        <button id="checkout-btn" class="checkout-btn">Finalizar pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrinho fixo -->
+  <footer class="carrinho-footer">
+    <button class="btn-carrinho" id="cart-btn">
+      ( <span id="cart-count">0</span> ) Veja meu carrinho
+      <span class="icon">🛒</span>
+    </button>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const cartBtn = document.getElementById("cart-btn");
+  const cartModal = document.getElementById("cart-modal");
+  const cartItemsContainer = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+  const closeModalBtn = document.getElementById("close-modal-btn");
+  const cartCounter = document.getElementById("cart-count");
+  const checkoutBtn = document.getElementById("checkout-btn");
+  const addressInput = document.getElementById("address");
+  const paymentInput = document.getElementById("payment-method");
+  const nameInput = document.getElementById("client-name");
+
+  const nameWarn = document.getElementById("name-warn");
+  const addressWarn = document.getElementById("address-warn");
+  const paymentWarn = document.getElementById("payment-warn");
+
+  const spanItem = document.getElementById("date-span");
+  const cartFooter = document.querySelector(".carrinho-footer");
+
+  let cart = [];
+
+  function updateCartModal() {
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      const div = document.createElement("div");
+      div.innerHTML = `
+        <p><strong>${item.name}</strong> — Qtd: ${item.quantity} — R$ ${(item.price * item.quantity).toFixed(2)}
+          <button class="remove-btn" data-index="${index}">❌</button>
+        </p>
+      `;
+      cartItemsContainer.appendChild(div);
+      total += item.price * item.quantity;
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+    cartCounter.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+    document.querySelectorAll(".remove-btn").forEach(btn => {
+      btn.onclick = () => {
+        const i = btn.getAttribute("data-index");
+        cart.splice(i, 1);
+        updateCartModal();
+      };
+    });
+  }
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".add-to-cart-btn");
+    if (!btn) return;
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    const item = cart.find(p => p.name === name);
+    item ? item.quantity++ : cart.push({ name, price, quantity: 1 });
+    updateCartModal();
+  });
+
+  cartBtn.onclick = () => {
+    cartModal.style.display = "flex";
+    cartFooter.classList.add("hidden");
+  };
+
+  closeModalBtn.onclick = () => {
+    cartModal.style.display = "none";
+    cartFooter.classList.remove("hidden");
+  };
+
+  checkoutBtn.onclick = () => {
+    const name = nameInput.value.trim();
+    const address = addressInput.value.trim();
+    const payment = paymentInput.value.trim();
+
+    // Resetar avisos
+    nameWarn.classList.add("hidden");
+    addressWarn.classList.add("hidden");
+    paymentWarn.classList.add("hidden");
+
+    if (!name) nameWarn.classList.remove("hidden");
+    if (!address) addressWarn.classList.remove("hidden");
+    if (!payment) paymentWarn.classList.remove("hidden");
+
+    if (!name || !address || !payment) return;
+
+    const msg = cart.map(item =>
+      `${item.name} (Qtd: ${item.quantity}) - R$${(item.price * item.quantity).toFixed(2)}`
+    ).join('\n');
+
+    const whatsapp = `https://wa.me/5585987337442?text=${encodeURIComponent(
+      `Olá! Meu nome é ${name}.\nPedido:\n${msg}\n\nEndereço: ${address}\nPagamento: ${payment}`
+    )}`;
+
+    window.open(whatsapp, "_blank");
+
+    cart = [];
+    updateCartModal();
+    cartModal.style.display = "none";
+    cartFooter.classList.remove("hidden");
+  };
+
+  function checkRestaurantOpen() {
+    const h = new Date().getHours();
+    return h >= 19 && h < 22;
+  }
+
+  spanItem.style.backgroundColor = checkRestaurantOpen() ? "green" : "red";
+  spanItem.title = checkRestaurantOpen() ? "Estamos abertos!" : "Estamos fechados!";
+});
+  
+  </script>
+</body>
+</html>
